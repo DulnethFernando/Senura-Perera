@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Senura Perera</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/5ae7122677.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -21,60 +22,211 @@
                 <span class="logo-circle">S</span>
                 <h2>Senura</h2>
             </div>
-            <nav class="nav-links">
-                <a href="" class="normal-btn">Home</a>
-                <a href="" class="normal-btn">About</a>
-                <a href="" class="normal-btn">Portfolio</a>
-                <a href="" class="full-btn">Contact</a>
+            <nav class="nav-links" id="primary-nav" role="navigation" aria-label="Primary Navigation">
+                <a href="#home" class="normal-btn">Home</a>
+                <a href="#about" class="normal-btn">About</a>
+                <a href="#portfolio" class="normal-btn">Portfolio</a>
+                <a href="#contact" class="full-btn">Contact</a>
             </nav>
-            <div class="menu-toggle" id="menu-toggle">☰</div>
+            <button class="menu-toggle" id="menu-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
         </div>
     </header>
-
-    <!-- ===== HERO SECTION ===== -->
-    <section class="hero-section container">
-        <div class="hero-content">
-            <div class="text">
-                <div class="main-text">
-                    <div class="intro">
-                        <h1>Hello, I’m </h1>
-                        <span>Senura Perera.</span>
+    <div class="nav-overlay" id="nav-overlay" hidden></div>
+    <div id="home">
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero-section container">
+            <div class="hero-content">
+                <div class="text">
+                    <div class="main-text">
+                        <div class="intro">
+                            <h1>Hello, I’m </h1>
+                            <span>Senura Perera.</span>
+                        </div>
+                        <p>
+                            Hi, I’m Senura Perera, a Sri Lankan Graphic Designer with 4+ years of
+                            experience. I run Spectrix Designs, creating branding, social media
+                            content, and videos for clients locally and internationally.
+                        </p>
+                        <a href="#about" class="hero-btn">Say Hello!</a>
                     </div>
-                    <p>
-                        Hi, I’m Senura Perera, a Sri Lankan Graphic Designer with 4+ years of
-                        experience. I run Spectrix Designs, creating branding, social media
-                        content, and videos for clients locally and internationally.
-                    </p>
-                    <a href="" class="full-btn">Say Hello!</a>
+                    <div class="stats">
+                        <div class="stat-card">
+                            <h3>4+ Y.</h3>
+                            <p>Experience</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>300+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>60</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="stats">
-                    <div class="stat-card">
-                        <h3>4+ Y.</h3>
-                        <p>Experience</p>
+                <div class="hero-image">
+                    <img src="assets/Senura.jpeg" alt="Senura Perera" />
+                </div>
+            </div>
+
+
+        </section>
+    </div>
+    <div id="about">
+        <!-- ===== ABOUT SECTION ===== -->
+        <section class="about-section container">
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="about-image">
+                        <img src="assets/Senura.jpeg" alt="Senura Perera" />
                     </div>
-                    <div class="stat-card">
-                        <h3>300+</h3>
-                        <p>Projects Completed</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>60</h3>
-                        <p>Happy Clients</p>
+                    <div class="about-text">
+                        <div class="abt-content">
+                            <h2>About Me</h2>
+                            <hr>
+                            <p>
+                                I create high-quality, visually engaging designs that align with each client’s brand and goals. With clear communication, attention to detail, and a smooth workflow, I ensure every project is delivered professionally and exceeds expectations.
+                            </p>
+                        </div>
+                        <div class="abt-btns">
+                            <a href="https://www.behance.net/senuraperera4" target="_blank" class="full-btn">My Projects</a>
+                            <a href="assets/SENURA PERERA CV-1.pdf" class="hero-btn" download><i class="fa-solid fa-download"></i> Download CV</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="assets/Senura.jpeg" alt="Senura Perera" />
+        </section>
+    </div>
+    <div id="portfolio">
+        <!-- ===== PORTFOLIO SECTION ===== -->
+        <section class="portfolio-section container">
+            <div class="portfolio-content">
+                <div class="portfolio-grid">
+                    <div class="expertise">
+                        <h3>My Expertise</h3>
+                        <hr>
+                        <div class="expertise-item">
+                            <p>Photoshop</p>
+                            <div class="expertise-bar"><span class="photoshop"></span></div>
+                        </div>
+                        <div class="expertise-item">
+                            <p>Illustrator</p>
+                            <div class="expertise-bar"><span class="illustrator"></span></div>
+                        </div>
+                        <div class="expertise-item">
+                            <p>PremierePro</p>
+                            <div class="expertise-bar"><span class="premierepro"></span></div>
+                        </div>
+                        <div class="expertise-item">
+                            <p>AfterEffects</p>
+                            <div class="expertise-bar"><span class="aftereffects"></span></div>
+                        </div>
+                        <div class="expertise-item">
+                            <p>LightRoom</p>
+                            <div class="expertise-bar"><span class="lightroom"></span></div>
+                        </div>
+                    </div>
+                    <div class="work-experience">
+                        <h3>My Work Experience</h3>
+                        <hr>
+                        <div class="experience">
+                            <h4>Ceylonese Crabs | Graphic Designer</h4>
+                            <p>I was a graphic designer at <span>Ceylonese Crabs</span>, where I created packaging and social media visuals that reflected
+                            the brand's Sri Lankan heritage and premium seafood identity.</p>
+                        </div>
+                        <div class="experience">
+                            <h4>Kuwalya | Graphic Designer</h4>
+                            <p>I worked as a graphic designer as <span>Kuwalya</span>, creating
+                            promotional and social media designs that reflected the brand's elegant, traditional bridal aesthetic.</p>
+                        </div>
+                        <div class="experience">
+                            <h4>ICET | Multimedia Editor</h4>
+                            <p>At <span>ICET</span>, I work as a Graphic Designer and Video Editor, creating
+                            professional graphics, video edits and motion designs using Adobe Photoshop, Illustrator,
+                            Premiere Pro, and After Effects to support branding and marketing needs.</p>
+                        </div>
+                        <div class="experience last">
+                            <h4>Algorithm Digital | Multimedia Editor</h4>
+                            <p>I am a multimedia Editor at <span>Algorithm Digital</span>, where I create videos, graphics, and social
+                            media content to support marketing campaings and strengthen digital presence.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://www.behance.net/senuraperera4" target="_blank" class="full-btn">Behance <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </section>
+    </div>
+    <div id="socials">
+        <div class="social-links container">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/__senura_perera__?igsh=b2tndGQwbzNvYnFp" target="_blank"><img alt="Instagram logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/128px-Instagram_logo.svg.png?20160616034027"></a>
+                <a href="https://www.behance.net/senuraperera4" target="_blank"><img alt="Behance logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Behance_logo.svg/128px-Behance_logo.svg.png?20180331154838"></a>
+                <a href="https://www.facebook.com/share/1FwM3D72TF/" target="_blank"><img alt="Facebook logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Facebook_Logo_%282019%29.svg/128px-Facebook_Logo_%282019%29.svg.png?20210720031430"></a>
+                <a href="https://www.linkedin.com/in/senura-perera-85b515313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img width="128" alt="LinkedIn Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/128px-LinkedIn_Logo.svg.png?20170711102837"></a>
+                <a href="https://wa.me/message/BQ4RJVAIRDKHC1" target="_blank"><img width="128" alt="WhatsApp logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/WhatsApp_logo.svg/128px-WhatsApp_logo.svg.png?20170606174648"></a>
             </div>
         </div>
-
-
-    </section>
-    <script>
-        // Simple mobile menu toggle
-        const toggle = document.getElementById('menu-toggle');
-        const nav = document.querySelector('.nav-links');
-        toggle.addEventListener('click', () => nav.classList.toggle('show'));
-    </script>
+    </div>
+    <div id="contact">
+        <!-- ===== CONTACT SECTION ===== -->
+        <section class="contact-section container">
+            <div class="contact-content">
+                <div class="contact-card">
+                    <div class="contact-text">
+                        <h2>Get In Touch</h2>
+                        <hr>
+                    </div>
+                    <div class="contacts">
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fa-solid fa-location-dot icon"></i>
+                                <div class="contact-details">
+                                    <h4>Address:</h4>
+                                    <p>157/A Thissa Mawatha, Walana, Panadura</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-solid fa-envelope icon"></i>
+                                <div class="contact-details">
+                                    <h4>My Email:</h4>
+                                    <p>senuraperera456@gmail.com</p>
+                                    <p>spectrixdesigns@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-solid fa-phone icon"></i>
+                                <div class="contact-details">
+                                    <h4>Call Me Now:</h4>
+                                    <p>+94 76 584 8269</p>
+                                    <p>+94 71 962 8269</p>
+                                </div>
+                            </div>
+                            <div class="social-info">
+                                <a class="icon" href="https://www.instagram.com/__senura_perera__?igsh=b2tndGQwbzNvYnFp" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                <a class="icon" href="https://www.behance.net/senuraperera4" target="_blank"><i class="fa-brands fa-behance"></i></a>
+                                <a class="icon" href="https://www.facebook.com/share/1FwM3D72TF/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a class="icon" href="https://www.linkedin.com/in/senura-perera-85b515313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a class="icon" href="https://wa.me/message/BQ4RJVAIRDKHC1" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                        <div class="contact-form">
+                            <form action="https://api.web3forms.com/submit" method="POST">
+                                <div class="form">
+                                    <input type="hidden" name="access_key" value="cad19a55-a8a6-4e86-a3a3-48a5ba70537c">
+                                    <input type="text" name="name" placeholder="Your Name" required>
+                                    <input type="email" name="email" placeholder="Your Email Address" required>
+                                    <textarea name="message" placeholder="Message" required></textarea>
+                                    <button type="submit" class="full-btn submit-btn">Send Email <i class="fa-solid fa-paper-plane"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
