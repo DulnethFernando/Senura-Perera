@@ -82,8 +82,24 @@ img {
   .social-info .icon { width: 44px !important; height: 44px !important; border-radius: 8px !important; }
 
   /* Bottom socials block */
-  #socials .social-icons { gap: 1rem !important; flex-wrap: wrap !important; justify-content: center !important; }
-  #socials { height: auto !important; padding: 1rem 0 !important; }
+  #socials .social-icons { 
+    display: flex !important;
+    gap: clamp(1.5rem, 4vw, 2.5rem) !important;
+    justify-content: center !important; 
+    flex-wrap: wrap !important;
+    max-width: 480px !important;
+    margin: 0 auto !important;
+    padding: 0 1rem !important;
+  }
+  #socials .social-icons img {
+    width: clamp(45px, 12vw, 55px) !important;
+    height: auto !important;
+    transition: transform 0.2s ease !important;
+  }
+  #socials .social-icons a:hover img {
+    transform: translateY(-3px) !important;
+  }
+  #socials { height: auto !important; padding: 3rem 0 !important; }
 
   /* Behance / full-btn in portfolio: center and allow stacking */
   .portfolio-content .full-btn { align-self: center !important; margin-top: 0.9rem !important; }
@@ -312,6 +328,7 @@ a {
   transform: translateY(-3px);
 }
 
+/*
 .hero-image {
   flex: 1 1 300px;
   display: flex;
@@ -319,11 +336,14 @@ a {
   border-radius: 25px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
+*/
 
 .hero-image img {
   width: 100%;
-  max-width: 500px;
+  max-width: 450px;
   border-radius: 25px;
+  display: flex;
+  justify-content: center;
 }
 
 .main-text {
@@ -367,9 +387,13 @@ a {
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 1000px) {
+@media (max-width: 1040px) {
   .container {
     width: 90%;
+  }
+
+  .hero-image img {
+    display: none;
   }
 
   .hero-btn {
@@ -439,7 +463,7 @@ a {
     text-align: center;
   }
 
-  .hero-image {
+  .hero-image img {
     display: none;
   }
 
