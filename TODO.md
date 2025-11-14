@@ -1,0 +1,6 @@
+- [x] Add animateCounter function to scripts.js
+- [x] Modify initializeFadeElements to trigger counting animation for stat cards
+- [x] Test the animation on page load
+- [x] Fix fade-in glitch by changing DOMContentLoaded to window load event
+- [x] Make stat card hover animation faster
+- [x] Test stat card hover animation speed

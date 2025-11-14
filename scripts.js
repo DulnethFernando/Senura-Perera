@@ -6,6 +6,22 @@ function isInViewport(element) {
     );
 }
 
+// Function to animate counter from 0 to target
+function animateCounter(element, target, suffix) {
+    let current = 0;
+    const duration = 2000; // 2 seconds
+    const steps = 40; // update every 50ms
+    const increment = target / steps;
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
+        }
+        element.textContent = Math.floor(current) + suffix;
+    }, duration / steps);
+}
+
 // Function to handle scroll animation
 function handleScrollAnimation() {
     
@@ -48,6 +64,25 @@ function initializeFadeElements() {
             // Trigger immediate animation for home elements
             setTimeout(() => {
                 element.classList.add('visible');
+                // Trigger counter animation for stat cards
+                if (selector === '.stat-card') {
+                    const h3 = element.querySelector('h3');
+                    if (h3) {
+                        const text = h3.textContent.trim();
+                        let target = 0;
+                        let suffix = '';
+                        if (text.includes('+ Y.')) {
+                            target = parseInt(text.replace('+ Y.', ''));
+                            suffix = '+ Y.';
+                        } else if (text.includes('+')) {
+                            target = parseInt(text.replace('+', ''));
+                            suffix = '+';
+                        } else {
+                            target = parseInt(text);
+                        }
+                        animateCounter(h3, target, suffix);
+                    }
+                }
             }, delay);
             delay += 200; // Increment delay for next element
         });
@@ -76,8 +111,8 @@ function throttle(func, limit) {
     }
 }
 
-// Initialize animations when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
+// Initialize animations when page is fully loaded (including images)
+window.addEventListener('load', () => {
     initializeFadeElements();
     // Slight delay to ensure all elements are properly initialized
     setTimeout(() => {
@@ -96,7 +131,7 @@ window.addEventListener('resize', throttle(() => {
 }, 100));
 
 /* Mobile navigation toggle: smooth glide + overlay + accessibility */
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
     const toggle = document.getElementById('menu-toggle');
     const nav = document.getElementById('primary-nav');
     const overlay = document.getElementById('nav-overlay');
